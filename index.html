@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucas Lara | LaraTec.dev</title>
+    <style>
+        :root {
+            --bg-color: #0d1117; /* Fundo escuro estilo GitHub */
+            --card-bg: #161b22;
+            --accent-color: #238636; /* Verde GitHub/LaraTec */
+            --text-main: #ffffff;
+            --text-muted: #8b949e;
+            --hover-border: #388bfd;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, auto);
+            gap: 20px;
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        /* Estilo dos Cartões */
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid #30363d;
+            border-radius: 16px;
+            padding: 24px;
+            transition: transform 0.2s, border-color 0.2s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--hover-border);
+            cursor: pointer;
+        }
+
+        h2, h3 { margin: 0 0 10px 0; }
+        p { color: var(--text-muted); line-height: 1.5; font-size: 0.95rem; }
+        
+        /* Grid Layout Específico */
+        .profile {
+            grid-column: span 2;
+            grid-row: span 2;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .profile img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid var(--accent-color);
+        }
+
+        .laratec {
+            grid-column: span 2;
+            background: linear-gradient(145deg, #161b22, #0f2e1b);
+        }
+
+        .tech-stack { grid-column: span 1; grid-row: span 2; }
+        .projects { grid-column: span 3; grid-row: span 2; }
+        
+        .social {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .btn {
+            background-color: var(--accent-color);
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        /* Responsividade para Celular */
+        @media (max-width: 768px) {
+            .container { grid-template-columns: 1fr; }
+            .profile, .laratec, .tech-stack, .projects { grid-column: span 1; grid-row: auto; }
+            .profile { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="card profile">
+            <img src="https://avatars.githubusercontent.com/u/196140683?v=4" alt="Lucas Lara">
+            <div>
+                <h2>Lucas Lara</h2>
+                <p style="color: var(--accent-color); font-weight: bold;">Dev & Técnico em Eletrônica</p>
+                <p>Estudante de Análise e Desenvolvimento de Sistemas. Apaixonado por transformar código em solução e consertar o hardware que roda o mundo.</p>
+            </div>
+        </div>
+
+        <div class="card laratec">
+            <h3>🛠️ LaraTec Assistência</h3>
+            <p>Especialista em reparo de eletrônicos e soluções de hardware.</p>
+            <p>O ponto onde a manutenção encontra a tecnologia.</p>
+            <div style="margin-top: 15px;">
+                <a href="#" class="btn">Agendar Reparo</a>
+            </div>
+        </div>
+
+        <div class="card tech-stack">
+            <h3>⚡ Stack</h3>
+            <ul style="list-style: none; padding: 0; color: var(--text-muted);">
+                <li>📱 Android (Java/Kotlin)</li>
+                <li>💻 C / C++</li>
+                <li>🔧 Hardware Repair</li>
+                <li>☁️ GitHub & Cloud</li>
+            </ul>
+        </div>
+
+        <div class="card projects">
+            <h3>🚀 Projetos em Desenvolvimento</h3>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 15px;">
+                <div style="background: #0d1117; padding: 10px; border-radius: 8px;">
+                    <strong style="color: #fff;">White Label Apps</strong>
+                    <p style="font-size: 0.8rem;">Aplicativos personalizados para barbearias e comércios locais.</p>
+                </div>
+                <div style="background: #0d1117; padding: 10px; border-radius: 8px;">
+                    <strong style="color: #fff;">Happynotes</strong>
+                    <p style="font-size: 0.8rem;">Criação de conteúdo e histórias digitais para o público infantil.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card" style="grid-column: span 4; text-align: center;">
+            <h3>Vamos trabalhar juntos?</h3>
+            <p>Entre em contato para projetos de software ou manutenção.</p>
+            <div class="social" style="justify-content: center;">
+                <a href="https://github.com/Lucasgtlara" class="btn" style="background: #333;">GitHub</a>
+                <a href="#" class="btn" style="background: #25D366;">WhatsApp</a>
+                <a href="mailto:contato@laratec.dev" class="btn" style="background: #0078D4;">Email</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
