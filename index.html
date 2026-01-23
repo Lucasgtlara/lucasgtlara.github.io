@@ -70,6 +70,7 @@
             height: 100px;
             border-radius: 50%;
             border: 3px solid var(--accent-color);
+            object-fit: cover; /* Garante que a foto não estique */
         }
 
         .laratec {
@@ -77,6 +78,7 @@
             background: linear-gradient(145deg, #161b22, #0f2e1b);
         }
 
+        /* CORREÇÃO: O nome aqui deve bater com o HTML (.tech-stack) */
         .tech-stack { grid-column: span 1; grid-row: span 2; }
         .projects { grid-column: span 3; grid-row: span 2; }
         
@@ -121,11 +123,11 @@
             <p>Especialista em reparo de eletrônicos e soluções de hardware.</p>
             <p>O ponto onde a manutenção encontra a tecnologia.</p>
             <div style="margin-top: 15px;">
-                <a href="#" class="btn">Agendar Reparo</a>
+                <a href="https://wa.me/5561993780089?text=Olá, preciso de um reparo na LaraTec!" target="_blank" class="btn">Agendar Reparo</a>
             </div>
         </div>
 
-       <div class="card stack">
+       <div class="card tech-stack">
             <h3>⚡ Minha Stack Tecnológica</h3>
             <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 15px;">
                 
@@ -163,7 +165,8 @@
 
             </div>
         </div>
-      <div class="card projects" style="grid-column: 1 / -1;">
+
+        <div class="card projects" style="grid-column: 1 / -1;">
             <h3>🚀 Portfólio de Projetos</h3>
             
             <div style="background: linear-gradient(135deg, #1f6feb33, #1f6feb11); padding: 20px; border-radius: 12px; border: 1px solid #1f6feb; margin-bottom: 20px;">
@@ -181,7 +184,6 @@
             </div>
 
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
-                
                 <div style="background: #161b22; padding: 15px; border-radius: 8px; border: 1px solid #30363d; display: flex; flex-direction: column; justify-content: space-between;">
                     <div>
                         <strong style="color: #fff;">🤖 Shape.AI (Android)</strong>
@@ -219,19 +221,16 @@
                 </div>
             </div>
         </div>
-        </div>
+
         <div class="card" style="grid-column: 1 / -1; text-align: center;">
             <h3>Vamos trabalhar juntos?</h3>
             <p>Entre em contato para projetos de software ou manutenção.</p>
             <div class="social" style="justify-content: center;">
                 <a href="https://github.com/lucasgtlara" target="_blank" class="btn" style="background: #333;">GitHub</a>
-                
                 <a href="https://wa.me/5561993780089?text=Olá, vi seu portfólio LaraTec e gostaria de conversar!" target="_blank" class="btn" style="background: #25D366;">WhatsApp</a>
-                
                 <a href="mailto:lucas77188@estudante.ifb.edu.br" class="btn" style="background: #0078D4;">Email</a>
             </div>
         </div>
-    </div>
-
-</body>
+        
+    </div> </body>
 </html>
